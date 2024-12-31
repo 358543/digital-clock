@@ -1,14 +1,45 @@
-function updateTime() {
-  const now = new Date();
-
-  // Convert to Philippine Standard Time (UTC+8)
-  const options = { timeZone: 'Asia/Manila', hour12: false };
-  const timeInManila = now.toLocaleTimeString('en-US', options);
-
-  // Update the clock display
-  document.getElementById('time').textContent = timeInManila;
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-// Update the clock every second
-setInterval(updateTime, 1000);
-updateTime();
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.clock-container {
+  text-align: center;
+}
+
+.clock {
+  background: #000;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 20px 40px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  font-size: 64px;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+  letter-spacing: 4px;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+                            
