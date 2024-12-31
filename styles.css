@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  background: #f4f4f4;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -20,26 +20,45 @@ body {
 
 .clock {
   background: #000;
-  border: 2px solid #fff;
-  border-radius: 20px;
+  border: 5px solid #fff;
+  border-radius: 15px;
   padding: 20px 40px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 350px;
+  height: 150px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .time {
-  font-size: 64px;
+  font-family: 'DS-Digital', sans-serif;
+  font-size: 60px;
   color: #0ff;
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
   letter-spacing: 4px;
 }
 
 .footer {
   margin-top: 20px;
   font-size: 14px;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  }
-                            
+  color: #333;
+}
+
+/* Buttons (optional for design) */
+.clock::after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 10px;
+  background: #333;
+  border-radius: 5px;
+}
+
+@font-face {
+  font-family: 'DS-Digital';
+  src: url('fonts/ds_digital.ttf') format('truetype');
+}
